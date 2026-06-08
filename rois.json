@@ -1,0 +1,20 @@
+{
+  "weapons": {
+    "left": 1382,
+    "top": 983,
+    "width": 414,
+    "height": 185
+  },
+  "armor": {
+    "left": 0,
+    "top": 974,
+    "width": 46,
+    "height": 188
+  },
+  "top_right": {
+    "left": 1311,
+    "top": 6,
+    "width": 483,
+    "height": 186
+  }
+}

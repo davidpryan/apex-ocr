@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import cv2, mss, numpy; print\\('cv2:', cv2.__version__\\)\")",
+      "Bash(python3 -c \"import cairosvg; print\\('cairosvg ok'\\)\")",
+      "Bash(python3 -c \"from PIL import Image; print\\('PIL ok'\\)\")",
+      "Bash(python3 --version && which python3 && ls /opt/homebrew/bin/python* 2>/dev/null && which python && python --version 2>/dev/null)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(python3 test-experience-detection.py)",
+      "Bash(python3 inspect-experience.py images/ui-images/experience-screen.png)",
+      "Bash(python3 inspect-experience.py images/ui-images/exp-screen-3.png)",
+      "Bash(python3 -)",
+      "Bash(python3 -m py_compile /Users/davidryan/insights-analysis/detectors.py)",
+      "WebFetch(domain:apexlegends.fandom.com)",
+      "Bash(python3 test-squad-distribution.py)"
+    ]
+  }
+}
