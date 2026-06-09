@@ -514,6 +514,19 @@ class TopRightDetector:
         if dmg and len(dmg[0]) > 4:
             result["damage"] = (dmg[0][-4:], dmg[1])
 
+        # kills / assists / participation cannot exceed 59 (60-player lobby).
+        for key in ("kills", "assists", "participation"):
+            entry = result.get(key)
+            if entry and int(entry[0]) >= 60:
+                result[key] = None
+
+        # Sanity: kills + assists + participation must total < 60.
+        # A higher sum means at least one field has an OCR error; discard all
+        # three rather than silently propagating a bad number.
+        kap = [result.get(k) for k in ("kills", "assists", "participation")]
+        if sum(int(v[0]) for v in kap if v is not None) >= 60:
+            result["kills"] = result["assists"] = result["participation"] = None
+
         return result
 
 

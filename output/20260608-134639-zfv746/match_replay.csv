@@ -1,0 +1,4 @@
+game_id,game_start_time,map_name,row_time,elapsed_s,primary_weapon,secondary_weapon,armor_level,shield_type,shield_hp,flesh_hp,health,squads_remaining,players_remaining,kills,assists,participation,damage,map_x,map_y,location
+20260608-134639-zfv746,2026-06-08T13:46:39,,2026-06-08T13:46:54,15.0,,,2,none,0,92,92,,,,,,,,,
+20260608-134639-zfv746,2026-06-08T13:46:39,,2026-06-08T13:46:59,20.0,,,2,none,0,92,92,,,,,,,,,
+20260608-134639-zfv746,2026-06-08T13:46:39,,2026-06-08T13:47:04,25.1,,,2,none,0,92,92,,,,,,,,,

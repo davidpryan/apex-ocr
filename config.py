@@ -15,10 +15,12 @@ import os
 _HERE = os.path.dirname(os.path.abspath(__file__))
 ROI_FILE                  = os.path.join(_HERE, "rois.json")
 ICON_DIR                  = os.path.join(_HERE, "images", "stat-icons")
+MAPS_DIR                  = os.path.join(_HERE, "images", "maps")        # base maps + <slug>_pois.json
 EXPERIENCE_TEMPLATE       = os.path.join(_HERE, "images", "ui-images", "experience_tab_template.png")
 RANKED_LOADING_TEMPLATE   = os.path.join(_HERE, "images", "ui-images", "ranked_loading_template.png")
 MATCH_HISTORY_CSV         = os.path.join(_HERE, "match_history.csv")   # one row per game (experience)
 MATCH_REPLAY_CSV          = os.path.join(_HERE, "match_replay.csv")    # one row per X s during GAME
+OUTPUT_DIR                = os.path.join(_HERE, "output")               # per-game subdirs: output/<game_id>/
 
 # ---------------------------------------------------------------------------
 # Ranked-loading screen classifier
@@ -156,6 +158,18 @@ SHIELD_BAR_MID_Y   = 0.940   # divides shield bar (above) from health bar (below
 
 CAPTURE_PADDING    = 20    # extra pixels added to every ROI edge when capturing
 VERTICAL_BUFFER_PX = 0     # pixels to strip from top+bottom for non-fullscreen game windows
+
+# ---------------------------------------------------------------------------
+# Minimap localisation  (top-left HUD minimap → position on the full map)
+# Fractions of full-screen width/height; calibrated on a 2696×1520 capture.
+# ---------------------------------------------------------------------------
+
+MINIMAP_LEFT_FRAC        = 0.012
+MINIMAP_TOP_FRAC         = 0.035
+MINIMAP_RIGHT_FRAC       = 0.145
+MINIMAP_BOT_FRAC         = 0.250
+MINIMAP_CENTER_MASK_FRAC = 0.12   # radius (of minimap min-dim) to mask the player chevron
+MAP_MIN_INLIERS          = 12     # min RANSAC inliers to trust a localisation
 
 # ---------------------------------------------------------------------------
 # Weapon bar  (bottom-right)
