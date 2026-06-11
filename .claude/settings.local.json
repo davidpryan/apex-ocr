@@ -17,7 +17,9 @@
       "Bash(python3 -c 'import cv2; img=cv2.imread\\('\\\\''__TRACKED_VAR__'\\\\''\\); print\\('\\\\''__TRACKED_VAR__'\\\\'', img.shape[1] if img is not None else '\\\\''MISSING'\\\\'', '\\\\''x'\\\\'', img.shape[0] if img is not None else '\\\\'''\\\\''\\)')",
       "Bash(python3 benchmark-overhead.py)",
       "Bash(pip install *)",
-      "Bash(python3 -c \"import PySide6; print\\(PySide6.__version__\\)\")"
+      "Bash(python3 -c \"import PySide6; print\\(PySide6.__version__\\)\")",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
