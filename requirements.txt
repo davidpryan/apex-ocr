@@ -1,0 +1,17 @@
+# PyTorch (CPU-only) — install BEFORE this file, with:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#
+# easyocr depends on torch/torchvision. Installing the CPU-only build first
+# (the app always runs with gpu=False) avoids pip pulling the much larger
+# CUDA-enabled wheels from PyPI when it resolves easyocr's dependencies.
+
+easyocr
+opencv-python
+mss
+numpy
+PySide6
+Pillow
+pandas
+plotly
+psutil
+streamlit
